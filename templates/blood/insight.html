@@ -1,0 +1,155 @@
+<head>
+    <style>
+        /* Impact Section */
+        .impact-section {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            justify-items: center; /* Ensures proper alignment of grid items */
+        }
+
+        .impact-card {
+            text-align: center;
+        }
+
+        .impact-card img {
+            width: 300px; /* Set the width to a fixed value */
+            height: 200px; /* Set a fixed height */
+            object-fit: cover; /* Ensure the image covers the box without distortion */
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 4rem 2rem;
+            background-color: var(--light);
+            text-align: center;
+        }
+
+        .stats-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            margin: 1rem;
+            display: inline-block; /* Align cards horizontally */
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            text-align: center; /* Center-aligns the section titles */
+            margin-bottom: 2rem; /* Adds space below titles */
+        }
+
+        /* New Style: Ensuring the stats label is above the grid */
+        .stats-label {
+            margin-bottom: 1rem;
+        }
+
+        /* Stats Card Container */
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .blood-donation-hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                        url('/api/placeholder/1920/1080') center/cover;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+        
+        .blood-donation-hero-content {
+            max-width: 800px;
+        }
+        
+        .blood-donation-hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .blood-donation-hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        
+    </style>
+</head>
+
+<section class="impact-section">
+    <h2 class="section-title" style="text-align: center;">How Your Donation Helps</h2>
+    <div class="impact-grid">
+        <div class="impact-card">
+            <img src="https://img.freepik.com/premium-vector/emergency-red-siren-rescue-vector-design_624938-1311.jpg?w=1380" alt="Emergency Care">
+            <h3>Emergency Response</h3>
+            <p>Critical for accident victims and emergency surgeries</p>
+        </div>
+        <div class="impact-card">
+            <img src="https://media.istockphoto.com/id/1477214805/photo/cancer-detection.jpg?s=2048x2048&w=is&k=20&c=2GuGYW0698htbCWw-IfOWuRDwKkqVqTjx7v5KLCLlAo=" alt="Cancer Treatment">
+            <h3>Cancer Treatment</h3>
+            <p>Essential for patients undergoing chemotherapy</p>
+        </div>
+        <div class="impact-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzzRF2vw0vwNpjnWrmEApty1AuLUJk2Jm2Fw&s" alt="Chronic Conditions">
+            <h3>Chronic Conditions</h3>
+            <p>Helps patients with blood disorders and chronic illnesses</p>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="stats-section" style="color:black">
+    <h2 class="section-title">The Impact of Blood Donation</h2>
+    <div class="stats-label">
+        {% comment %} <p>Here are some key statistics that highlight the importance of blood donation:</p> {% endcomment %}
+    </div>
+    <div class="stats-container">
+        <div class="stats-card">
+            <div class="stat-number">4.5M</div>
+            <p>Indians need blood transfusions each year</p>
+        </div>
+        <div class="stats-card">
+            <div class="stat-number">43,000</div>
+            <p>Pints of donated blood used each day in the U.S.</p>
+        </div>
+        <div class="stats-card">
+            <div class="stat-number">3</div>
+            <p>Lives saved by one donation</p>
+        </div>
+        <div class="stats-card">
+            <div class="stat-number">1%</div>
+            <p>Of eligible people donate blood</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="blood-donation-hero-section">
+    <div class="blood-donation-hero-content">
+        <h1>Every Drop Counts</h1>
+        <p>Discover how your blood donation can make a difference in someone's life. One donation can save up to three lives.</p>
+        <a href="#donate" class="btn btn-primary">Donate Now</a>
+    </div>
+</section>

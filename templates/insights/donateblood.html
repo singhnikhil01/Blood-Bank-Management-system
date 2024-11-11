@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Insights</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e94444;
+            --secondary: #2d3748;
+            --light: #f7fafc;
+            --dark: #1a202c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                        url('/api/placeholder/1920/1080') center/cover;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Statistics Section */
+        .stats-section {
+            padding: 4rem 2rem;
+            background-color: var(--light);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Impact Section */
+        .impact-section {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .impact-card {
+            text-align: center;
+        }
+
+        .impact-card img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Health Benefits Section */
+        .health-section {
+            padding: 4rem 2rem;
+            background-color: var(--light);
+        }
+
+        .health-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .health-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .health-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Common Styles */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--secondary);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #d03636;
+            transform: translateY(-2px);
+        }
+
+        /* Donor Trend Chart */
+        .chart-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Every Drop Counts</h1>
+            <p>Discover how your blood donation can make a difference in someone's life. One donation can save up to three lives.</p>
+            <a href="#donate" class="btn btn-primary">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <h2 class="section-title">The Impact of Blood Donation</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">4.5M</div>
+                <p>Americans need blood transfusions each year</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">43,000</div>
+                <p>Pints of donated blood used each day in the U.S.</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3</div>
+                <p>Lives saved by one donation</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1%</div>
+                <p>Of eligible people donate blood</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <h2 class="section-title">How Your Donation Helps</h2>
+        <div class="impact-grid">
+            <div class="impact-card">
+                <img src="/api/placeholder/400/300" alt="Emergency Care">
+                <h3>Emergency Response</h3>
+                <p>Critical for accident victims and emergency surgeries</p>
+            </div>
+            <div class="impact-card">
+                <img src="/api/placeholder/400/300" alt="Cancer Treatment">
+                <h3>Cancer Treatment</h3>
+                <p>Essential for patients undergoing chemotherapy</p>
+            </div>
+            <div class="impact-card">
+                <img src="/api/placeholder/400/300" alt="Chronic Conditions">
+                <h3>Chronic Conditions</h3>
+                <p>Helps patients with blood disorders and chronic illnesses</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Benefits Section -->
+    <section class="health-section">
+        <h2 class="section-title">Health Benefits of Donating</h2>
+        <div class="health-grid">
+            <div class="health-card">
+                <i class="fas fa-heart"></i>
+                <h3>Heart Health</h3>
+                <p>Regular donation may reduce risk of heart attack by 88%</p>
+            </div>
+            <div class="health-card">
+                <i class="fas fa-fire"></i>
+                <h3>Calorie Burn</h3>
+                <p>One donation burns approximately 650 calories</p>
+            </div>
+            <div class="health-card">
+                <i class="fas fa-notes-medical"></i>
+                <h3>Free Health Screening</h3>
+                <p>Each donation includes mini physical and vital checks</p>
+            </div>
+            <div class="health-card">
+                <i class="fas fa-sync"></i>
+                <h3>Cell Regeneration</h3>
+                <p>Stimulates production of new blood cells</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donor Trends Chart -->
+    <section class="stats-section">
+        <h2 class="section-title">Donor Trends</h2>
+        <div class="chart-container">
+            <div id="donorChart"></div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.12.0/Recharts.js"></script>
+</body>
+</html>
