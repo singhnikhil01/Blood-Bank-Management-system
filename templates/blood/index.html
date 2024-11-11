@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Bank Management System</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      :root {
+        --primary: #e53e3e;
+        --primary-dark: #c53030;
+        --secondary: #2d3748;
+        --light: #f7fafc;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #2d3748;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        min-height: 80vh;
+        min-width: 100vw;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+          url("static/image/homepage.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        color: white;
+      }
+
+      .hero-content {
+        max-width: 800px;
+        margin-bottom: 3rem;
+      }
+
+      .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      /* Stats Section */
+      .stats-section {
+        background-color: var(--primary);
+        color: white;
+        padding: 3rem 1rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+
+      .stat-item {
+        text-align: center;
+        flex: 1;
+        min-width: 200px;
+        padding: 1rem;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Access Cards */
+      .access-section {
+        padding: 5rem 2rem;
+        background-color: var(--light);
+      }
+
+      .access-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .access-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .access-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card-header {
+        background: var(--primary);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .card-header i {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .card-content {
+        padding: 2rem;
+        text-align: center;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+          url("https://cdn.pixabay.com/photo/2017/06/27/04/21/feeling-2446129_960_720.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 5rem 2rem;
+      }
+
+      /* Testimonials */
+      .testimonials {
+        padding: 5rem 2rem;
+        background-color: white;
+      }
+
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .testimonial-card {
+        background: var(--light);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-weight: 600;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .stat-item {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    {% include "blood/navbar.html" %}
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Saving Lives Through Blood Donation</h1>
+        <p>
+          Connect with donors, manage blood inventory, and help save lives with
+          our comprehensive blood bank management system.
+        </p>
+        <a href="#access" class="btn btn-primary">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="stat-item">
+        <div class="stat-number">10,000+</div>
+        <div class="stat-label">Active Donors</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">15,000+</div>
+        <div class="stat-label">Lives Saved</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">500+</div>
+        <div class="stat-label">Partner Hospitals</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Support</div>
+      </div>
+    </section>
+
+    <!-- Access Section -->
+    <section id="access" class="access-section">
+      <h2 class="section-title">Access Dashboard</h2>
+      <div class="access-cards">
+        <div class="access-card">
+          <div class="card-header">
+            <i
+              class="fas fa-user-injured"
+              style="font-size: 60px; color: red"
+            ></i>
+            <h3 style="color: black">Patient Portal</h3>
+          </div>
+          <div class="card-content">
+            <p>
+              Request blood units, track status, and manage your health records.
+            </p>
+            <a href="/patient/patientlogin" class="btn btn-primary"
+              >Patient Login</a
+            >
+          </div>
+        </div>
+
+        <div class="access-card">
+          <div class="card-header">
+            <i
+              class="fas fa-hand-holding-medical"
+              style="font-size: 60px; color: red"
+            ></i>
+            <i class="fas fa-hand-holding-medical"></i>
+            <h3 style="color: black">Donor Portal</h3>
+          </div>
+          <div class="card-content">
+            <p>Schedule donations, view history, and track your impact.</p>
+            <a href="/donor/donorlogin" class="btn btn-primary">Donor Login</a>
+          </div>
+        </div>
+
+        <div class="access-card">
+          <div class="card-header">
+            <i
+              class="fas fa-user-shield"
+              style="font-size: 60px; color: red"
+            ></i>
+            <h3 style="color: black">Admin Portal</h3>
+          </div>
+          <div class="card-content">
+            <p>Manage inventory, approve requests, and oversee operations.</p>
+            <a href="/adminlogin" class="btn btn-primary">Admin Login</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2>Ready to Save Lives?</h2>
+      <p>
+        Join our network of donors and help make a difference in someone's life.
+      </p>
+      <a href="/donor/donorsignup" class="btn btn-primary">Become a Donor</a>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <h2 class="section-title">What Our Community Says</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>
+            "The system made it incredibly easy to find donors during an
+            emergency. Forever grateful for this platform!"
+          </p>
+          <strong>- Sarah Johnson, Patient</strong>
+        </div>
+        <div class="testimonial-card">
+          <p>
+            "As a regular donor, I love how simple it is to schedule donations
+            and track my contribution to the community."
+          </p>
+          <strong>- Michael Chen, Donor</strong>
+        </div>
+        <div class="testimonial-card">
+          <q>
+            The administrative features have streamlined our entire blood bank
+            management process significantly.
+          </q>
+          <br />
+
+          <strong>- Dr. Emily Parker, Hospital Administrator</strong>
+        </div>
+      </div>
+    </section>
+    {% include "blood/footer.html" %}
+  </body>
+</html>

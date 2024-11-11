@@ -1,8 +1,7 @@
-{% extends 'patient/patientbase.html' %}
+{% extends 'donor/donorbase.html' %}
 {% block content %}
 {% load widget_tweaks %}
 {%load static%}
-
 <head>
     <style>
         .label {
@@ -19,16 +18,16 @@
    </head>
 <br><br>
 <div class="container">
-    <H4 class="text-center">My Blood Request</H4><br>
+    <H4 class="text-center">My Blood Requests</H4><br>
     <table class="table table-light table-hover table-bordered table-striped">
         <thead class="bg-dark">
             <tr>
-                <th scope="col" style="color: rgb(192, 192, 192);">Patient's Name</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Age</th>
+                <th scope="col" style="color: rgb(192, 192, 192);">Patient Name</th>
+                <th scope="col" style="color: rgb(192, 192, 192);">Patient Age</th>
                 <th scope="col" style="color: rgb(192, 192, 192);">Reason</th>
                 <th scope="col" style="color: rgb(192, 192, 192);">Blood Group</th>
                 <th scope="col" style="color: rgb(192, 192, 192);">Unit</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Date</th>
+                <th scope="col" style="color: rgb(192, 192, 192);"> Date</th>
                 <th scope="col" style="color: rgb(192, 192, 192);">Status</th>
                 
             </tr>

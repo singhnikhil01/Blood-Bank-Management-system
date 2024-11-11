@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PATIENT</title>
+    <title>DONOR</title>
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -66,10 +66,10 @@ body{
 .wrapper .sidebar{
   width: 200px;
   height: 100%;
-  left:0;
-  background: #343a40;
+  background: 	#343a40;
   padding: 30px 0px;
   position: fixed;
+  left: 0; 
 }
 
 .wrapper .sidebar h2{
@@ -81,13 +81,13 @@ body{
 
 .wrapper .sidebar ul li{
   padding: 15px;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid#dedede;
   border-bottom: 1px solid rgba(0,0,0,0.05);
   border-top: 1px solid rgba(255,255,255,0.05);
 }    
 
 .wrapper .sidebar ul li a{
-  color: #dedede;
+  color:#dedede;
   display: block;
 }
 
@@ -119,7 +119,7 @@ body{
   line-height: 45px;
   text-align: center;
   margin: 0 5px;
-  color: #dedede;
+  color:#dedede;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -156,6 +156,7 @@ body{
     font-size: 2ex;
 }
 
+
     </style>
 </head>
 <body>
@@ -175,15 +176,15 @@ body{
       </nav>
 <br><br>
 <div class="wrapper">
-    <div class="sidebar">
+    <div class="sidebar" style="position:fixed">
         
         <ul>
             <li><a style="text-decoration:none;" href="/"><i class="fas fa-home"></i>Home</a></li>
-            <li><a style="text-decoration:none;" href="/patient/make-request"><i class="fas fa-user-plus"></i>Make Request</a></li>
-            <li><a style="text-decoration:none;" href="/patient/my-request"><i class="fas fa-history"></i>Request History</a></li>
-
+            <li><a style="text-decoration:none;" href="/donor/donate-blood"><i class="fas fa-hand-holding-medical"></i>Donate Blood</a></li>
+            <li><a style="text-decoration:none;" href="/donor/donation-history"><i class="fas fa-history"></i>Donation History</a></li>
+            <li><a style="text-decoration:none;" href="/donor/make-request"><i class="fas fa-user-plus"></i>Blood Request</a></li>
+            <li><a style="text-decoration:none;" href="/donor/request-history"><i class="fas fa-history"></i>Request History</a></li>
         </ul> 
-
     </div>
     <div class="main_content">
 

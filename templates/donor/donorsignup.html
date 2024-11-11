@@ -29,7 +29,7 @@
             <br><br><br>
             <div class="card card-5">
                 <div class="card-heading">
-                    <h2 class="title">Patient Registration</h2>
+                    <h2 class="title">Donor Registration</h2>
                 </div>
                 <div class="card-body">
                     <form method="POST" autocomplete="off" enctype="multipart/form-data">
@@ -71,14 +71,7 @@
                             </div>
                         </div>
 
-                        <div class="form-row">
-                            <div class="name">Age</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    {% render_field patientForm.age|attr:'required:true'  class="input--style-5"  %}
-                                </div>
-                            </div>
-                        </div>
+
 
 
 
@@ -104,29 +97,13 @@
                             </div>
                         </div>
 
-                        <div class="form-row">
-                            <div class="name">Disease</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    {% render_field patientForm.disease|attr:'required:true'  class="input--style-5"  %}
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="form-row">
-                            <div class="name">Doctor's Name</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    {% render_field patientForm.doctorname|attr:'required:true'  class="input--style-5"  %}
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="form-row">
                             <div class="name">Address</div>
                             <div class="value">
                                 <div class="input-group">
-                                    {% render_field patientForm.address|attr:'required:true'  class="input--style-5"  %}
+                                    {% render_field donorForm.address|attr:'required:true'  class="input--style-5"  %}
                                 </div>
                             </div>
                         </div>
@@ -135,7 +112,7 @@
                             <div class="name">Contact No.</div>
                             <div class="value">
                                 <div class="input-group">
-                                    {% render_field patientForm.mobile|attr:'required:true'  class="input--style-5"  %}
+                                    {% render_field donorForm.mobile|attr:'required:true'  class="input--style-5"  %}
                                 </div>
                             </div>
                         </div>
@@ -144,12 +121,10 @@
                             <div class="name">Photo</div>
                             <div class="value">
                                 <div class="input-group">
-                                    {% render_field patientForm.profile_pic|attr:'required:true'  class="input--style-5"  %}
+                                    {% render_field donorForm.profile_pic|attr:'required:true'  class="input--style-5"  %}
                                 </div>
                             </div>
                         </div>
-
-   
   
   
 
@@ -158,7 +133,7 @@
                         </div>
                     </form>
                     <br>
-                    <p style="text-align: center;">Already have an account? <a style="text-decoration: none;" href="/patient/patientlogin">Login To Continue</a></p>
+                    <p style="text-align: center;">Already have an account? <a style="text-decoration: none;" href="/donor/donorlogin">Login Now</a></p>
 
                 </div>
             </div>

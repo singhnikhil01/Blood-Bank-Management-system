@@ -28,7 +28,7 @@
             <br><br><br>
             <div class="card card-5">
                 <div class="card-heading">
-                    <h2 class="title">Patient Login</h2>
+                    <h2 class="title">Admin Login</h2>
                 </div>
                 <div class="card-body">
                     <form method="POST">
@@ -37,8 +37,9 @@
                             <div class="name">Username</div>
                             <div class="value">
                                 <div class="input-group">
+                                   
                                     {% render_field form.username class="input--style-5"%}
-
+                     
                                 </div>
                             </div>
                         </div>
@@ -46,6 +47,7 @@
                             <div class="name">Password</div>
                             <div class="value">
                                 <div class="input-group">
+                                    
                                     {% render_field form.password class="input--style-5" %}
                                 </div>
                             </div>
@@ -55,13 +57,10 @@
                         
 
                         <div class="text-center">
-                            <button class="btn btn--radius-2 btn-success btn-block" type="submit">Login</button>
+                            <button class="btn btn--radius-2 btn-danger btn-block" type="submit">Login</button>
                         </div>
                     </form>
-                    <br>
-                    <p style="text-align: center;">Don't have an account? <a style="text-decoration: none;" href="/patient/patientsignup">Register Now</a></p>
-
-                </div>
+                                    </div>
             </div>
         </div>
     </div>

@@ -1,8 +1,7 @@
-{% extends 'patient/patientbase.html' %}
+{% extends 'donor/donorbase.html' %}
 {% block content %}
 {% load widget_tweaks %}
 {%load static%}
-
 <head>
     <style>
         .label {
@@ -19,13 +18,12 @@
    </head>
 <br><br>
 <div class="container">
-    <H4 class="text-center">My Blood Request</H4><br>
+    <H4 class="text-center">My Donation History</H4><br>
     <table class="table table-light table-hover table-bordered table-striped">
         <thead class="bg-dark">
             <tr>
-                <th scope="col" style="color: rgb(192, 192, 192);">Patient's Name</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Age</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Reason</th>
+                <th scope="col" style="color: rgb(192, 192, 192);">Donor's Age</th>
+                <th scope="col" style="color: rgb(192, 192, 192);">Disease (if any)</th>
                 <th scope="col" style="color: rgb(192, 192, 192);">Blood Group</th>
                 <th scope="col" style="color: rgb(192, 192, 192);">Unit</th>
                 <th scope="col" style="color: rgb(192, 192, 192);">Date</th>
@@ -34,12 +32,13 @@
             </tr>
         </thead>
         <tbody>
-            {% for t in blood_request %}
+            {% for t in donations %}
             <tr>
-                <td> {{t.patient_name}}</td>
                 
-                <td>{{t.patient_age}}</td>
-                <td>{{t.reason}}</td>
+                
+                <td>{{t.age}}</td>
+                <td> {{t.disease}}</td>
+                
                 <td>{{t.bloodgroup}}</td>
                 <td>{{t.unit}}</td>
                 <td>{{t.date}}</td>
