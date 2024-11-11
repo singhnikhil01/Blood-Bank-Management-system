@@ -8,8 +8,8 @@ from django.conf import settings
 from datetime import date, timedelta
 from django.core.mail import send_mail
 from django.contrib.auth.models import User
-# from blood import forms as bforms
-# from blood import models as bmodels
+from blood import forms as bforms
+from blood import models as bmodels
 
 
 def patient_signup_view(request):
