@@ -12,6 +12,7 @@ from donor import models as dmodels
 from patient import models as pmodels
 from donor import forms as dforms
 from patient import forms as pforms
+from diseaseprediction import views
 
 def home_view(request):
     x=models.Stock.objects.all()
@@ -246,3 +247,10 @@ def reject_donation_view(request,pk):
     donation.status='Rejected'
     donation.save()
     return HttpResponseRedirect('/admin-donation')
+
+def admin_disease_prediction_view(request):
+        form , prediction_result = views.predict_disease(request)
+        return render(request, 'blood/prediction.html', {
+        'form': form,
+        'prediction_result': prediction_result
+    })

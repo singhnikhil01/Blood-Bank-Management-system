@@ -10,6 +10,7 @@ from django.core.mail import send_mail
 from django.contrib.auth.models import User
 from blood import forms as bforms
 from blood import models as bmodels
+from diseaseprediction import views
 
 
 def patient_signup_view(request):
@@ -61,3 +62,11 @@ def my_request_view(request):
     patient= models.Patient.objects.get(user_id=request.user.id)
     blood_request=bmodels.BloodRequest.objects.all().filter(request_by_patient=patient)
     return render(request,'patient/my_request.html',{'blood_request':blood_request})
+
+
+def disease_prediction_view(request):
+        form , prediction_result = views.predict_disease(request)
+        return render(request, 'patient/prediction.html', {
+        'form': form,
+        'prediction_result': prediction_result
+    })

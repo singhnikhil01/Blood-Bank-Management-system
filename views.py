@@ -12,6 +12,7 @@ from donor import models as dmodels
 from patient import models as pmodels
 from donor import forms as dforms
 from patient import forms as pforms
+from diseaseprediction import views
 
 def home_view(request):
     x=models.Stock.objects.all()

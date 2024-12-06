@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     "patient",
     "blood",
     "donor",
-    "analytics",
+    "diseaseprediction",
 ]
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

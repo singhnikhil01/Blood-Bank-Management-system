@@ -14,6 +14,7 @@ urlpatterns = [
     path('adminlogin', LoginView.as_view(template_name='blood/adminlogin.html'),name='adminlogin'),
     path('admin-dashboard', views.admin_dashboard_view,name='admin-dashboard'),
     path('admin-blood', views.admin_blood_view,name='admin-blood'),
+    path('admin-diseaseprediction',views.admin_disease_prediction_view, name="admin-disease-prediction"),
     path('admin-donor', views.admin_donor_view,name='admin-donor'),
     path('admin-patient', views.admin_patient_view,name='admin-patient'),
     path('update-donor/<int:pk>', views.update_donor_view,name='update-donor'),
@@ -27,5 +28,4 @@ urlpatterns = [
     path('admin-request-history', views.admin_request_history_view,name='admin-request-history'),
     path('update-approve-status/<int:pk>', views.update_approve_status_view,name='update-approve-status'),
     path('update-reject-status/<int:pk>', views.update_reject_status_view,name='update-reject-status'),
-    path('analytics/', include('analytics.urls')),
 ]
