@@ -19,7 +19,7 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'static')
 SECRET_KEY = "django-insecure-7ke)26fuk+lbo$qg*12v2+l$u*87w%(qv%_(91c80@-za-n(_8"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['blood-bank-management-system-b3nn.onrender.com','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['blood-bank-management-system-gddr.onrender.com','localhost','127.0.0.1']
 # Application definition
 INSTALLED_APPS = [
     "django.contrib.admin",
