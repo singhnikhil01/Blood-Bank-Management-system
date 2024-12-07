@@ -1,5 +1,4 @@
 asgiref==3.2.7
-gunicorn
 certifi==2024.8.30
 charset-normalizer==3.4.0
 Django==3.0.5
@@ -19,3 +18,4 @@ sqlparse==0.3.1
 threadpoolctl==3.5.0
 tzdata==2024.2
 urllib3==2.2.3
+whitenoise==6.8.2
